@@ -119,23 +119,17 @@
 
 
 
-<meta name="description" content="recently，The technology of react-native is very hot,In this case, I also wrote an app for myself, a react-native。Pack of the generated apk installation package here  Transmission  The installation pac">
+<meta name="description" content="有很多人曾经都写过类似的博文，但是我觉得没有一个完整的集成之路，在我学习的时候走了好多弯路，看别人很多类似的博文还是概不出来，经过两天的艰辛探索，终于初步掌握了redux的基本原理。 关于redux的基本构成以及基本写法建议去看阮一峰老师的博文，写的非常好，但是唯一的缺憾就是缺少demo的支撑，看完之后没法上手去构建自己的redux，">
 <meta property="og:type" content="article">
-<meta property="og:title" content="第一个react-native app项目">
-<meta property="og:url" content="https://cryingbat.github.io/2016/08/26/hello-world/index.html">
+<meta property="og:title" content="RN之react-navigation集成redux的艰辛之路">
+<meta property="og:url" content="https://cryingbat.github.io/2018/05/31/react-native2/index.html">
 <meta property="og:site_name" content="cryingbat">
-<meta property="og:description" content="recently，The technology of react-native is very hot,In this case, I also wrote an app for myself, a react-native。Pack of the generated apk installation package here  Transmission  The installation pac">
+<meta property="og:description" content="有很多人曾经都写过类似的博文，但是我觉得没有一个完整的集成之路，在我学习的时候走了好多弯路，看别人很多类似的博文还是概不出来，经过两天的艰辛探索，终于初步掌握了redux的基本原理。 关于redux的基本构成以及基本写法建议去看阮一峰老师的博文，写的非常好，但是唯一的缺憾就是缺少demo的支撑，看完之后没法上手去构建自己的redux，">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="https://cryingbat.github.io/images/4.jpg">
-<meta property="og:image" content="https://cryingbat.github.io/images/0.jpg">
-<meta property="og:image" content="https://cryingbat.github.io/images/3.jpg">
-<meta property="og:image" content="https://cryingbat.github.io/images/2.jpg">
-<meta property="og:image" content="https://cryingbat.github.io/images/0.jpg">
-<meta property="og:updated_time" content="2018-05-30T12:53:03.219Z">
+<meta property="og:updated_time" content="2018-05-30T12:50:57.332Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="第一个react-native app项目">
-<meta name="twitter:description" content="recently，The technology of react-native is very hot,In this case, I also wrote an app for myself, a react-native。Pack of the generated apk installation package here  Transmission  The installation pac">
-<meta name="twitter:image" content="https://cryingbat.github.io/images/4.jpg">
+<meta name="twitter:title" content="RN之react-navigation集成redux的艰辛之路">
+<meta name="twitter:description" content="有很多人曾经都写过类似的博文，但是我觉得没有一个完整的集成之路，在我学习的时候走了好多弯路，看别人很多类似的博文还是概不出来，经过两天的艰辛探索，终于初步掌握了redux的基本原理。 关于redux的基本构成以及基本写法建议去看阮一峰老师的博文，写的非常好，但是唯一的缺憾就是缺少demo的支撑，看完之后没法上手去构建自己的redux，">
 
 
 
@@ -165,13 +159,13 @@
 
 
 
-  <link rel="canonical" href="https://cryingbat.github.io/2016/08/26/hello-world/"/>
+  <link rel="canonical" href="https://cryingbat.github.io/2018/05/31/react-native2/"/>
 
 
 
 
 
-  <title>第一个react-native app项目 | cryingbat</title>
+  <title>RN之react-navigation集成redux的艰辛之路 | cryingbat</title>
   
 
 
@@ -290,7 +284,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://cryingbat.github.io/2016/08/26/hello-world/">
+    <link itemprop="mainEntityOfPage" href="https://cryingbat.github.io/2018/05/31/react-native2/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="denghaoqi">
@@ -307,7 +301,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">第一个react-native app项目</h1>
+          <h1 class="post-title" itemprop="name headline">RN之react-navigation集成redux的艰辛之路</h1>
         
 
         <div class="post-meta">
@@ -319,8 +313,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2016-08-26T02:50:03+08:00">
-                2016-08-25
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-05-31T04:50:30+08:00">
+                2018-05-30
               </time>
             
 
@@ -379,12 +373,17 @@
       
 
       
-        <p>recently，The technology of react-native is very hot,In this case, I also wrote an app for myself, a react-native。Pack of the generated apk installation package here  <a href="https://github.com/cryingbat/react-redux-demo" target="_blank" rel="noopener">Transmission</a></p>
-<p> The installation package of android4.4/5.1/6.0 runs smoothly。This project is also an advanced step of this project, integrating the state management of<br> <a id="more"></a><br> redux，The redux state management is integrated，Interested students can move on to this project. I hope you can give us more advice. Learn together.</p>
-<h1 id="react-redux-demo"><a href="#react-redux-demo" class="headerlink" title="react-redux-demo"></a>react-redux-demo</h1><p>The project integrates the react-redux state management on the react-native-app base project.<br>If you learn about react-native, please move first <a href="https://github.com/cryingbat/react-native-app" target="_blank" rel="noopener">https://github.com/cryingbat/react-native-app</a><br>This will definitely have a basic understanding of react-native. Looking back on this, it’s a lot of work.</p>
-<h1 id="On-the-whole："><a href="#On-the-whole：" class="headerlink" title="On the whole："></a>On the whole：</h1><p>  React-navigation integrates redux state management. I’m sure you won’t have any trouble with redux after you’ve seen this example。<br>and then :<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">Project running-first please: </span><br><span class="line"> # git clone https://github.com/cryingbat/react-redux-demo</span><br><span class="line"> # npm i or yarn  install the Related。</span><br><span class="line">and then run in your android of virtual machine or in your android 。</span><br><span class="line">Execute the command: </span><br><span class="line"> # react-native run-android</span><br></pre></td></tr></table></figure></p>
-<h1 id="Note-this-project-is-not-compatible-with-ios"><a href="#Note-this-project-is-not-compatible-with-ios" class="headerlink" title="Note (this project is not compatible with ios)"></a>Note (this project is not compatible with ios)</h1><h1 id="screenshot"><a href="#screenshot" class="headerlink" title="screenshot"></a>screenshot</h1><p>first:The app will have a full screen rotation of three images， <br><br><img src="/images/4.jpg" width="200" style="display:inline-block"><br><img src="/images/0.jpg" width="200" style="display:inline-block"><br><img src="/images/3.jpg" width="200" style="display:inline-block"><br><img src="/images/2.jpg" width="200" style="display:inline-block"><br><img src="/images/0.jpg" width="200" style="display:inline-block"><br><br></p>
-<h1 id="For-beginners-get-a-quick-command-of-the-react-native-usage-and-navigation-switch-It-has-a-very-big-effect-I-hope-you-can-study-together-and-make-progress-together-star-me"><a href="#For-beginners-get-a-quick-command-of-the-react-native-usage-and-navigation-switch-It-has-a-very-big-effect-I-hope-you-can-study-together-and-make-progress-together-star-me" class="headerlink" title="For beginners, get a quick command of the react-native usage and navigation switch. It has a very big effect. I hope you can study together and make progress together.  star me"></a>For beginners, get a quick command of the react-native usage and navigation switch. It has a very big effect. I hope you can study together and make progress together.  <a href="https://github.com/cryingbat/react-redux-demo" target="_blank" rel="noopener">star me</a></h1>
+        <p>有很多人曾经都写过类似的博文，但是我觉得没有一个完整的集成之路，在我学习的时候走了好多弯路，看别人很多类似的博文还是概不出来，经过两天的艰辛探索，终于初步掌握了redux的基本原理。</p>
+<p>关于redux的基本构成以及基本写法建议去看阮一峰老师的博文，写的非常好，但是唯一的缺憾就是缺少demo的支撑，看完之后没法上手去构建自己的redux，<br><a id="more"></a></p>
+<p>我写这篇博文就是希望大家能够看到我的文章之后，快速掌握redux的基础用法。不过有一点我犯懒了就是我的关于redux的基础是集成在我从开始学习react开始的一个项目里。<br>如果是react的初学者建议先看我的这个项目，全是基础的东西，看完之后就能上手<a href="https://github.com/cryingbat/react-native-app" target="_blank" rel="noopener">基础版</a>。<br>集成<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">先说一下目录结构吧</span><br><span class="line">![就重点介绍一下src目录吧](https://img-blog.csdn.net/20180420160247584?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzE1MjQzOTYz/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70)</span><br><span class="line">关于redux的部分集成在store文件夹下，具体依赖大家可以去 clone下来自己去package.json里面看看。</span><br><span class="line"></span><br><span class="line">我的store是这样划分的。</span><br></pre></td></tr></table></figure></p>
+<p><code>action</code> 这个文件夹下放所有的action<br><code>------actionTypes</code> 这个文件夹下放所有的type定义<br><code>------counter</code> 这个文件夹下放关于counter的action<br><code>------news</code> 这个文件夹下放关于news的action<br><code>reducers</code>这个文件夹下放所有的reducer<br><code>------counter</code> 这个文件夹下放关于counter的reducers<br><code>------news</code> 这个文件夹下放关于news的reducers<br><code>store</code>文件夹下面的store.js用来作为store的出口<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">基本结构就是这样的。</span><br><span class="line">接下来说说具体各部分内容及分工</span><br><span class="line">先说	·`action`·</span><br><span class="line">```action```是```view```去修改```state```唯一的方式。也就是所view只有触发一个```action```才能修改```state```，所以```action```就是纯方法</span><br><span class="line">所以有action就必须先第一![这里写图片描述](https://img-blog.csdn.net/2018042016135434?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzE1MjQzOTYz/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70)actionTypes</span><br></pre></td></tr></table></figure></p>
+<p>action<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">![这里写图片描述](https://img-blog.csdn.net/20180420161508118?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzE1MjQzOTYz/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70)</span><br><span class="line">这里定义了两个action，返回两个不同的事件，当然比较简单的逻辑就是计数器。一个增加一个减少。</span><br><span class="line">接下来就交给了reducer</span><br></pre></td></tr></table></figure></p>
+<p>reducer<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">![这里写图片描述](https://img-blog.csdn.net/20180420161751966?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzE1MjQzOTYz/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70)</span><br><span class="line"></span><br><span class="line">根据action提交过来的不同的状态去执行不同的```reducer```。</span><br><span class="line">```reducer```其实就是一个加工厂，拿到旧的```state```，经过加工return一个新的```state```。</span><br><span class="line">都是简单的逻辑就不解释了。</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">接下来就是```store```了</span><br></pre></td></tr></table></figure></p>
+<p>store<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">![这里写图片描述](https://img-blog.csdn.net/20180420162112216?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzE1MjQzOTYz/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70)</span><br><span class="line"></span><br><span class="line">store就是对不同的reducer的集成了。这里采用combineReducer这个中间件，去集成，不懂得可以去[reducer](http://www.redux.org.cn/docs/recipes/reducers/UsingCombineReducers.html)这里看看。</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">到这里redux部分的任务就完成了。。</span><br><span class="line"></span><br><span class="line">接下来就是怎么使用他了，  </span><br><span class="line"></span><br><span class="line">在入口文件里面去导入```store```状态。以便将所有的```state```都注入到```props```的身上，便于我们去使用。</span><br></pre></td></tr></table></figure></p>
+<p><provider store="{store}"><br>    <navigator><br></navigator></provider><br><code></code>Provider<code>是</code>react-redux<code>`</code>的提供的功能之一。大家可以去看看react-redux；这个很简单就不赘述了。<br>重要的是看看页面怎么使用<br>大家可以去看看page.js页面里面。引入action里面的方法<br>直接在prop的身上去dispatch这个action，。就可以访问到相对应的action、拿state就在mapStateToProps这个方法里面去访问state对象就ok。访问action就可以在mapDispatchToProps里面去dispatch即可。写法都在page.js里面了，大家去看看就知道了。</p>
+<p>最后附上github地址：如果是react的初学者建议先看我的这个项目，全是基础的东西，看完之后就能上手<a href="https://github.com/cryingbat/react-native-app" target="_blank" rel="noopener">基础版</a>。<br>集成redux之后的版本<a href="https://github.com/cryingbat/react-redux-demo" target="_blank" rel="noopener">进阶版</a></p>
+<p>我相信大家看完之后，会有很大的收货的，。毕竟为了这个坑我研究好久。希望共勉。<br>觉得我的demo写的不错的可以动动小手star走一波。也欢迎有问题的同学issue。。</p>
+
       
     </div>
     
@@ -408,15 +407,15 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/2018/05/30/react-native/" rel="next" title="打包android apk遇到的问题">
+                <i class="fa fa-chevron-left"></i> 打包android apk遇到的问题
+              </a>
+            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/08/26/linux/" rel="prev" title="在 CentOS7 上安装 MongoDB">
-                在 CentOS7 上安装 MongoDB <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -473,17 +472,8 @@
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            文章目录
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            站点概览
-          </li>
-        </ul>
-      
 
-      <section class="site-overview-wrap sidebar-panel">
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -577,22 +567,6 @@
         </div>
       </section>
 
-      
-      <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#react-redux-demo"><span class="nav-number">1.</span> <span class="nav-text">react-redux-demo</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#On-the-whole："><span class="nav-number">2.</span> <span class="nav-text">On the whole：</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Note-this-project-is-not-compatible-with-ios"><span class="nav-number">3.</span> <span class="nav-text">Note (this project is not compatible with ios)</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#screenshot"><span class="nav-number">4.</span> <span class="nav-text">screenshot</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#For-beginners-get-a-quick-command-of-the-react-native-usage-and-navigation-switch-It-has-a-very-big-effect-I-hope-you-can-study-together-and-make-progress-together-star-me"><span class="nav-number">5.</span> <span class="nav-text">For beginners, get a quick command of the react-native usage and navigation switch. It has a very big effect. I hope you can study together and make progress together.  star me</span></a></li></ol></div>
-            
-
-          </div>
-        </section>
-      <!--/noindex-->
       
 
       
