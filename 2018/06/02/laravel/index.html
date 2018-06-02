@@ -119,17 +119,17 @@
 
 
 
-<meta name="description" content="just do it">
-<meta property="og:type" content="website">
-<meta property="og:title" content="tags">
-<meta property="og:url" content="https://cryingbat.github.io/tags/index.html">
+<meta name="description" content="通过cdn减少压缩的选项在laravel的==webpack.mix.js==文件中配置： 123456789101112131415mix.webpackConfig(&amp;#123;     plugins: [        ],     externals: &amp;#123;//配置不打包的选项        &amp;apos;element-ui&amp;apos;: &amp;apos;Element&amp;apos;,">
+<meta property="og:type" content="article">
+<meta property="og:title" content="laravel中vue的压缩">
+<meta property="og:url" content="https://cryingbat.github.io/2018/06/02/laravel/index.html">
 <meta property="og:site_name" content="cryingbat">
-<meta property="og:description" content="just do it">
+<meta property="og:description" content="通过cdn减少压缩的选项在laravel的==webpack.mix.js==文件中配置： 123456789101112131415mix.webpackConfig(&amp;#123;     plugins: [        ],     externals: &amp;#123;//配置不打包的选项        &amp;apos;element-ui&amp;apos;: &amp;apos;Element&amp;apos;,">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-05-26T03:05:18.800Z">
+<meta property="og:updated_time" content="2018-06-02T06:18:08.764Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="tags">
-<meta name="twitter:description" content="just do it">
+<meta name="twitter:title" content="laravel中vue的压缩">
+<meta name="twitter:description" content="通过cdn减少压缩的选项在laravel的==webpack.mix.js==文件中配置： 123456789101112131415mix.webpackConfig(&amp;#123;     plugins: [        ],     externals: &amp;#123;//配置不打包的选项        &amp;apos;element-ui&amp;apos;: &amp;apos;Element&amp;apos;,">
 
 
 
@@ -159,13 +159,13 @@
 
 
 
-  <link rel="canonical" href="https://cryingbat.github.io/tags/"/>
+  <link rel="canonical" href="https://cryingbat.github.io/2018/06/02/laravel/"/>
 
 
 
 
 
-  <title>tags | cryingbat</title>
+  <title>laravel中vue的压缩 | cryingbat</title>
   
 
 
@@ -272,33 +272,163 @@
 
   <div id="posts" class="posts-expand">
     
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://cryingbat.github.io/2018/06/02/laravel/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="denghaoqi">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="cryingbat">
+    </span>
+
     
-    
-    <div class="post-block page">
       <header class="post-header">
 
-	<h1 class="post-title" itemprop="name headline">tags</h1>
-
-
-
-</header>
-
-      
-      
-      
-      <div class="post-body">
         
         
+          <h1 class="post-title" itemprop="name headline">laravel中vue的压缩</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-06-02T19:34:00+08:00">
+                2018-06-02
+              </time>
+            
+
+            
+
+            
+          </span>
+
           
-        
-      </div>
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/vue/" itemprop="url" rel="index">
+                    <span itemprop="name">vue</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
       
       
+
+      
+        <h2 id="通过cdn减少压缩的选项"><a href="#通过cdn减少压缩的选项" class="headerlink" title="通过cdn减少压缩的选项"></a>通过cdn减少压缩的选项</h2><p>在laravel的==webpack.mix.js==文件中配置：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">mix.webpackConfig(&#123; </span><br><span class="line">    plugins: [</span><br><span class="line">        ], </span><br><span class="line">    externals: &#123;//配置不打包的选项</span><br><span class="line">        &apos;element-ui&apos;: &apos;Element&apos;,</span><br><span class="line">        &apos;axios&apos;: &apos;axios&apos;, </span><br><span class="line">        &apos;vue&apos;: &apos;Vue&apos;, </span><br><span class="line">        &apos;vuex&apos;: &apos;Vuex&apos;, </span><br><span class="line">        &apos;vue-router&apos;: &apos;VueRouter&apos;, </span><br><span class="line">        &apos;vue-chartjs&apos;: &apos;VueChartJs&apos;, </span><br><span class="line">        &apos;lodash&apos;: &apos;_&apos;, </span><br><span class="line">    &#125; &#125;)</span><br><span class="line">.js(&apos;resources/assets/js/app.js&apos;, &apos;public/js&apos;)  </span><br><span class="line">.sass(&apos;resources/assets/sass/app.scss&apos;, &apos;public/css&apos;)  </span><br><span class="line">.styles([&apos;node_modules/element-ui/lib/theme-chalk/index.css&apos;], &apos;public/css/element-ui.css&apos;);</span><br></pre></td></tr></table></figure>
+<h3 id="在blade文件中加入cdn"><a href="#在blade文件中加入cdn" class="headerlink" title="在blade文件中加入cdn"></a>在blade文件中加入cdn</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">&lt;head&gt; ... </span><br><span class="line">&lt;script src=&quot;//upyun1.codercto.com/images/1x1.png&quot; data-original=&quot;//cdn.bootcss.com/vue/2.5.13/vue.min.js&quot;&gt;&lt;/script&gt;</span><br><span class="line"></span><br><span class="line">&lt;script src=&quot;//upyun1.codercto.com/images/1x1.png&quot; data-original=&quot;//cdn.bootcss.com/vuex/3.0.1/vuex.min.js&quot;&gt;&lt;/script&gt; </span><br><span class="line"></span><br><span class="line">&lt;script src=&quot;//upyun1.codercto.com/images/1x1.png&quot; data-original=&quot;//cdn.bootcss.com/vue-router/3.0.1/vue-router.min.js&quot;&gt;&lt;/script&gt; </span><br><span class="line"></span><br><span class="line">&lt;script src=&quot;//upyun1.codercto.com/images/1x1.png&quot; data-original=&quot;//cdn.bootcss.com/element-ui/2.0.11/index.js&quot;&gt;&lt;/script&gt; </span><br><span class="line"></span><br><span class="line">&lt;script src=&quot;//upyun1.codercto.com/images/1x1.png&quot; data-original=&quot;//cdn.bootcss.com/axios/0.17.1/axios.min.js&quot;&gt;&lt;/script&gt; </span><br><span class="line"></span><br><span class="line">&lt;script src=&quot;//upyun1.codercto.com/images/1x1.png&quot; data-original=&quot;//cdn.bootcss.com/lodash.js/4.17.4/lodash.min.js&quot;&gt;&lt;/script&gt; </span><br><span class="line"></span><br><span class="line">&lt;script src=&quot;//upyun1.codercto.com/images/1x1.png&quot; data-original=&quot;//unpkg.com/vue-chartjs@2.8.7/dist/vue-chartjs.full.min.js&quot;&gt;&lt;/script&gt; </span><br><span class="line"></span><br><span class="line">&lt;link href=&quot;https://cdn.bootcss.com/element-ui/2.0.11/theme-chalk/index.css&quot; rel=&quot;stylesheet&quot;&gt;</span><br><span class="line"></span><br><span class="line">...</span><br><span class="line"></span><br><span class="line">&lt;/head&gt;</span><br></pre></td></tr></table></figure>
+<p>然后重新打包应用，最后生成的应用只有几十K了。<br>亲测将2.8M压缩为340K.效果很佳</p>
+
       
     </div>
     
     
     
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/05/31/react-native2/" rel="next" title="RN之react-navigation集成redux的艰辛之路">
+                <i class="fa fa-chevron-left"></i> RN之react-navigation集成redux的艰辛之路
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
   </div>
 
 
@@ -336,8 +466,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -431,6 +570,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#通过cdn减少压缩的选项"><span class="nav-number">1.</span> <span class="nav-text">通过cdn减少压缩的选项</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#在blade文件中加入cdn"><span class="nav-number">1.1.</span> <span class="nav-text">在blade文件中加入cdn</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
